@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Scheduler</h1>
+
+        <!-- Working Hours Input -->
+        <div class="working-hours">
+            <h3>Set Working Hours</h3>
+            <label for="workStart">Start:</label>
+            <input type="time" id="workStart" value="08:00">
+            <label for="workEnd">End:</label>
+            <input type="time" id="workEnd" value="18:00">
+            <button onclick="setWorkingHours()">Set Hours</button>
+        </div>
+
+        <!-- Event Input Section -->
+        <div class="input-section">
+            <input type="text" id="eventName" placeholder="Event Name">
+            <input type="time" id="startTime">
+            <input type="time" id="endTime">
+            <button onclick="addEvent()">Add Event</button>
+        </div>
+
+        <!-- Drag-and-Drop Scheduler -->
+        <div class="drag-drop-scheduler">
+            <h2>Drag and Drop Events</h2>
+            <div id="scheduleContainer" class="schedule-container">
+                <p>Drag events here to schedule them:</p>
+            </div>
+        </div>
+
+        <!-- Conflict Section -->
+        <div class="conflicts">
+            <h2>Conflicting Events</h2>
+            <ul id="conflictList"></ul>
+        </div>
+
+        <!-- Suggestions Section -->
+        <div class="suggestions">
+            <h2>Suggested Resolutions</h2>
+            <ul id="suggestionList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
